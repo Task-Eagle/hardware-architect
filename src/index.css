@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-app: #f5f5f5;
+    --bg-surface: #ffffff;
+    --bg-ribbon: #f3f3f3;
+    --bg-ribbon-tab-active: #ffffff;
+    --border-subtle: #e5e5e5;
+    --border-strong: #737373;
+    --text-primary: #171717;
+    --text-secondary: #525252;
+    --text-muted: #737373;
+    --accent-charcoal: #262626;
+    --accent-hover: #404040;
+    --selection-bg: #e5e5e5;
+    --office-bar-bg: #2b2b2b;
+    --office-bar-text: #ffffff;
+  }
+
+  .dark {
+    --bg-app: #121212;
+    --bg-surface: #1e1e1e;
+    --bg-ribbon: #1a1a1a;
+    --bg-ribbon-tab-active: #262626;
+    --border-subtle: #333333;
+    --border-strong: #737373;
+    --text-primary: #f5f5f5;
+    --text-secondary: #a3a3a3;
+    --text-muted: #737373;
+    --accent-charcoal: #e5e5e5;
+    --accent-hover: #ffffff;
+    --selection-bg: #2a2a2a;
+    --office-bar-bg: #141414;
+    --office-bar-text: #f5f5f5;
+  }
+
+  .high-contrast {
+    --bg-app: #000000 !important;
+    --bg-surface: #000000 !important;
+    --bg-ribbon: #000000 !important;
+    --bg-ribbon-tab-active: #000000 !important;
+    --border-subtle: #ffffff !important;
+    --border-strong: #ffffff !important;
+    --text-primary: #ffffff !important;
+    --text-secondary: #ffffff !important;
+    --text-muted: #ffffff !important;
+    --accent-charcoal: #ffffff !important;
+    --accent-hover: #ffffff !important;
+    --selection-bg: #333333 !important;
+    --office-bar-bg: #000000 !important;
+    --office-bar-text: #ffffff !important;
+  }
+
+  body {
+    background-color: var(--bg-app);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Monospace tabular numbers for tables, benchmarks, financials */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Office-specific micro styles */
+.ribbon-button {
+  border-radius: 4px;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+.ribbon-button:hover {
+  background-color: var(--selection-bg);
+}
+
+.high-contrast button,
+.high-contrast input,
+.high-contrast select {
+  border-width: 2px !important;
+  border-color: #ffffff !important;
+}
+
+.high-contrast a {
+  text-decoration: underline !important;
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #a3a3a3;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #404040;
+}
+

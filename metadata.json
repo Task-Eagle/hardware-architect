@@ -1,0 +1,6 @@
+{
+  "name": "Enterprise Hardware Architect",
+  "description": "Enterprise PC and workstation selection system for corporate roles with Windows and Linux configurations, benchmark analysis, TCO pricing, and Office-style ribbon navigation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
